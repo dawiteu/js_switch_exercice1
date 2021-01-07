@@ -1,3 +1,4 @@
+/*
 let jour = prompt("Entre un jour de la semaine"); 
 
 switch(jour){
@@ -20,20 +21,34 @@ switch(jour){
         console.log("Jour de la semaine en dehors de la semaine pro.."); 
 }
 
+    case "lundi" : case "mardi" : case : "mercredi" : 
+    console.log(` ${jour} a molengeek `); 
+    break;
 
+    case "jeudi" : case "vendred" :  
+    console.log(` ${jour} en elearning `); 
+    break;
+
+    case "samedi" : case "dimanche" :  
+    console.log(` ${jour} conge `); 
+    break;
+
+
+*/
 
 let age = parseInt(prompt("Entre ton age?")); 
 
-switch(age){
-    case age > 18:
-        console.log("Vous avez plus de 18 ans");
+
+switch(isNaN(age)){
+    case true:
+        console.log("pas un nombre");
     break;
 
-    case age < 18:
-        console.log("Vous avez moins de 18 ans"); 
-    break;
-    case 18:
-        console.log("tu as tout juste 18 ans");
+    case false:
+        switch (age >= 18){
+            case true: console.log('Majeur'); break; 
+            case false: console.log('Mineur'); break; 
+        }
     break;
     default:
         console.log("age inconnu??");
